@@ -1,8 +1,7 @@
 ##### Agimus #######################################
 agimus-demos.configure.dep:
 agimus-vision.configure.dep:
-agimus-hpp.configure.dep: dynamic_graph_bridge_msgs.install \
-	agimus_sot_msgs.install
+agimus-hpp.configure.dep: agimus_sot_msgs.install
 agimus-sot.configure.dep: dynamic_graph_bridge.install agimus_sot_msgs.install
 agimus.configure.dep: agimus-hpp.install agimus_sot_msgs.install
 agimus_sot_msgs.configure.dep:
