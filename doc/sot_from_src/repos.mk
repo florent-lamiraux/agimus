@@ -54,6 +54,3 @@ tiago_metapkg_ros_control_sot_repository=${SOT_REPO}
 tiago_metapkg_ros_control_sot_subdirs=sot_tiago_bringup
 tiago_metapkg_ros_control_sot_subdirs+=roscontrol_sot_tiago
 tiago_metapkg_ros_control_sot_subdirs+=tiago_metapkg_ros_control_sot
-
-include agimus/doc/sot_from_src/dependencies.mk
-include agimus/doc/sot_from_src/robotpkg.mk

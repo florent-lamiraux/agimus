@@ -4,7 +4,6 @@ dynamic-graph-python.configure.dep: dynamic-graph.install
 
 dynamic_graph_bridge_msgs.configure.dep:
 dynamic_graph_bridge.configure.dep: dynamic-graph.install \
-	dynamic_graph_bridge_msgs.install \
 	dynamic-graph-python.install \
 	sot-dynamic-pinocchio.install \
 	sot-core.install
