@@ -43,24 +43,24 @@ ifeq (${INSTALL_FROM_SOURCE}, TRUE)
 	include ${sot_repos.mk}
 endif
 
-agimus_branch=demo-pyrene
-agimus_repository=https://github.com/agimus
+agimus_branch=on-pyrene
+agimus_repository=https://github.com/florent-lamiraux
 
-agimus-sot_branch=master
-agimus-sot_repository=${AGIMUS_REPO}
+agimus-sot_branch=on-pyrene
+agimus-sot_repository=${FLORENT_REPO}
 
 agimus_sot_msgs_branch=master
 agimus_sot_msgs_repository=${AGIMUS_REPO}
 
-agimus-hpp_branch=master
-agimus-hpp_repository=${AGIMUS_REPO}
+agimus-hpp_branch=on-pyrene
+agimus-hpp_repository=${FLORENT_REPO}
 agimus-hpp_extra_flags=-DBUILD_ROS_INTERFACE=ON -DBUILD_HPP_PLUGIN=ON
 
 agimus-vision_branch=master
 agimus-vision_repository=${AGIMUS_REPO}
 
-agimus-demos_branch=master
-agimus-demos_repository=${AGIMUS_REPO}
+agimus-demos_branch=on-pyrene
+agimus-demos_repository=${FLORENT_REPO}
 
 agimus-doc_branch=master
 agimus-doc_repository=${AGIMUS_REPO}
