@@ -84,6 +84,7 @@ update:
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
+			-DCMAKE_CXX_FLAGS="-std=c++11" \
 			${$(@:.run_cmake=)_extra_flags} .. \
 			1> configure.stdout.cmake.log \
 			2> configure.stderr.cmake.log
