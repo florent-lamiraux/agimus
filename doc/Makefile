@@ -103,5 +103,4 @@ else
     include ${sot_empty_dependencies.mk}
   endif
   include ${targets.mk}
-  include ${specific-rules.mk}
 endif
