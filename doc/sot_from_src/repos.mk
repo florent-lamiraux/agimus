@@ -8,8 +8,8 @@ dynamic-graph-python_branch=v3.5.3
 dynamic-graph-python_repository=${SOT_REPO}
 dynamic-graph-python_extra_flags=-DSUFFIX_SO_VERSION=OFF -DPYTHON_EXECUTABLE=${PYTHON_EXECUTABLE}
 
-dynamic_graph_bridge_branch=v3.3.3
-dynamic_graph_bridge_repository=${SOT_REPO}
+dynamic_graph_bridge_branch=master
+dynamic_graph_bridge_repository=${FLORENT_REPO}
 
 dynamic_graph_bridge_msgs_branch=master
 dynamic_graph_bridge_msgs_repository=${SOT_REPO}

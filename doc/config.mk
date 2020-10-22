@@ -12,6 +12,7 @@ SOT_REPO               ?=${GITHUB_WEBSITE}stack-of-tasks
 RETHINK_ROBOTICS_REPO  ?=${GITHUB_WEBSITE}RethinkRobotics
 ROBOPTIM_REPO          ?=${GITHUB_WEBSITE}roboptim
 TRAC_REPO              ?=ssh://trac.laas.fr/git/jrl/robots/ros-hrp2
+FLORENT_REPO           ?=https://github.com/florent-lamiraux
 
 WGET=wget --quiet
 UNZIP=unzip -qq
