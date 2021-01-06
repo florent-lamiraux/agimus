@@ -9,8 +9,8 @@ $(error Environment variable DEVEL_HPP_DIR not defined. Did you source config.sh
 endif
 
 SRC_DIR=${DEVEL_HPP_DIR}/src
-ifndef INSTALL_DIR
-INSTALL_DIR=${DEVEL_HPP_DIR}/install
+ifndef INSTALL_HPP_DIR
+INSTALL_HPP_DIR=${DEVEL_HPP_DIR}/install
 endif
 
 # If you have a SSH key:

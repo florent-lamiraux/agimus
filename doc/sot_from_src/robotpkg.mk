@@ -9,21 +9,21 @@ robotpkg-wip.configure.dep: robotpkg.configure
 
 robotpkg.configure_nodep: robotpkg.checkout
 	$(call _status, "Configuring $(@:.configure_nodep=) ... ")
-	@test -f ${INSTALL_DIR}/etc/robotpkg.conf || (cd ${SRC_DIR}/$(@:.configure_nodep=)/bootstrap; \
-		./bootstrap --prefix=${INSTALL_DIR})
-	@if ! grep -q "# --- Agimus configuration ----" ${INSTALL_DIR}/etc/robotpkg.conf; then \
-		echo ""                                                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo ""                                                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "# --- Agimus configuration ----------------------" >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "JRL_FTP_USER=jrl"                                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "JRL_FTP_PASSWD=l445jrl"                            >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo ""                                                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "PREFER_ALTERNATIVE.c-compiler=ccache-gcc gcc"      >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "PREFER_ALTERNATIVE.c++-compiler=ccache-g++ g++"    >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "# For ccache"                                      >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "HOME.env=/local/jmirabel/devel/openrobots/install" >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo ""                                                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
-		echo "ACCEPTABLE_LICENSES+=pal-license"                  >> ${INSTALL_DIR}/etc/robotpkg.conf; \
+	@test -f ${INSTALL_HPP_DIR}/etc/robotpkg.conf || (cd ${SRC_DIR}/$(@:.configure_nodep=)/bootstrap; \
+		./bootstrap --prefix=${INSTALL_HPP_DIR})
+	@if ! grep -q "# --- Agimus configuration ----" ${INSTALL_HPP_DIR}/etc/robotpkg.conf; then \
+		echo ""                                                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo ""                                                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "# --- Agimus configuration ----------------------" >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "JRL_FTP_USER=jrl"                                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "JRL_FTP_PASSWD=l445jrl"                            >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo ""                                                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "PREFER_ALTERNATIVE.c-compiler=ccache-gcc gcc"      >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "PREFER_ALTERNATIVE.c++-compiler=ccache-g++ g++"    >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "# For ccache"                                      >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "HOME.env=/local/jmirabel/devel/openrobots/install" >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo ""                                                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
+		echo "ACCEPTABLE_LICENSES+=pal-license"                  >> ${INSTALL_HPP_DIR}/etc/robotpkg.conf; \
 	fi
 	@echo "${_msg_done}."
 

@@ -81,7 +81,7 @@ update:
 	$(eval curdir := $(subst ___,/,$(@:.run_cmake=)))
 	@mkdir -p ${SRC_DIR}/$(curdir)/${BUILD_FOLDER}
 	@cd ${SRC_DIR}/$(curdir)/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
 			-DINSTALL_DOCUMENTATION=${INSTALL_DOCUMENTATION} \
 			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-g -O3 -DNDEBUG" \
 			${$(@:.run_cmake=)_extra_flags} .. \

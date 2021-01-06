@@ -2,11 +2,11 @@ robot_model_py.configure: robot_model_py.configure.dep
 	cd ${SRC_DIR}/$(@:.configure=)/xml_reflection;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 	cd ${SRC_DIR}/$(@:.configure=)/urdf_parser_py;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 robot_model_py.install: robot_model_py.configure
 	${MAKE} -C ${SRC_DIR}/$(@:.install=)/xml_reflection/${BUILD_FOLDER} install; \
@@ -46,11 +46,11 @@ baxter_common.install:baxter_common.configure
 	make install
 
 romeo.configure: romeo.configure.dep
-	. ${INSTALL_DIR}/setup.sh; \
+	. ${INSTALL_HPP_DIR}/setup.sh; \
 	cd ${SRC_DIR}/romeo/romeo_description;\
 	mkdir -p ${BUILD_FOLDER}; \
 	cd ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER}; \
-	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_HPP_DIR} -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
 
 romeo.install: romeo.configure
 	${MAKE} -C ${SRC_DIR}/romeo/romeo_description/${BUILD_FOLDER} install

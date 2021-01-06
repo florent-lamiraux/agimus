@@ -44,7 +44,7 @@ __check_defined = \
       $(error Undefined $1$(if $2, ($2))))
 
 $(call check_defined, SRC_DIR    , "source  directory")
-$(call check_defined, INSTALL_DIR, "install directory")
+$(call check_defined, INSTALL_HPP_DIR, "install directory")
 $(call check_defined, BUILD_TYPE , "build type (Release or Debug)")
 $(call check_defined, INSTALL_DOCUMENTATION, "ON or OFF")
 
