@@ -20,7 +20,9 @@ roscontrol_sot.configure.dep: dynamic_graph_bridge.install \
 talos_data.configure.dep:
 sot-talos.configure.dep: dynamic_graph_bridge.install \
 	sot-dynamic-pinocchio.install \
+	pyrene-motions.install \
 	talos_data.install
+pyrene-motions.configure.dep:
 talos_metapkg_ros_control_sot.configure.dep: roscontrol_sot.install \
 	sot-talos.install
 
